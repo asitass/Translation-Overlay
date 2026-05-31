@@ -1,0 +1,6 @@
+# Binary model files (should not be diffed)
+*.bin linguist-generated
+*.ort linguist-generated
+*.traineddata linguist-generated
+*.spm linguist-generated
+*.wasm linguist-generated

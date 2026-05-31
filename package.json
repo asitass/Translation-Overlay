@@ -17,7 +17,7 @@
     "pack:win": "npm run build && electron-builder --win",
     "pack:linux": "npm run build && electron-builder --linux",
     "pack": "npm run build && electron-builder",
-    "postinstall": "electron-builder install-app-deps && node scripts/patch-bergamot-worker.js"
+    "postinstall": "electron-builder install-app-deps && node scripts/patch-bergamot-worker.js && node scripts/download-models.js"
   },
   "dependencies": {
     "@img/sharp-win32-x64": "^0.34.5",

@@ -10,3 +10,13 @@ release/
 venv/
 user-config.yaml
 .env
+
+# Model files (downloaded at runtime via postinstall)
+bergamot-models/
+paddle-models/
+tessdata/
+
+# Duplicate root-level files
+chi_sim.traineddata
+eng.traineddata
+pipeline.js
