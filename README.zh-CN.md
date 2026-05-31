@@ -17,11 +17,13 @@
     <a href="#cicd-流水线">CI/CD</a> •
     <a href="#故障排查">故障排查</a>
   </p>
+  <p align="center">
+    <a href="README.md">🇬🇧 English</a> • <a href="README.zh-CN.md">🇨🇳 中文</a>
+  </p>
 </p>
 
-<!-- TODO: 替换为实际演示 GIF -->
 <p align="center">
-  <img src="docs/demo/demo.gif" alt="Translation Overlay 演示" width="720">
+  <img src="docs/demo/4.png" alt="Translation Overlay — 游戏对话实时翻译" width="720">
 </p>
 
 选择屏幕上的任意区域，Translation Overlay 通过 OCR 识别文字，即时翻译，并以透明浮窗的形式将结果显示在原文上方。
@@ -47,6 +49,13 @@
 | | 场景 | 说明 |
 |---|---|---|
 | 🎮 | 玩外文游戏 | 实时翻译菜单、对话和字幕 |
+
+<p align="center">
+  <img src="docs/demo/1.png" alt="原始游戏画面" width="360">
+  <img src="docs/demo/3.png" alt="翻译覆盖层效果" width="360">
+  <br>
+  <em>原始游戏画面（左）→ 底部显示翻译覆盖层（右）</em>
+</p>
 | 📺 | 观看生肉番剧/影视 | 直接在视频上显示翻译字幕 |
 | 📚 | 阅读外文文档/论文 | OCR 识别并翻译屏幕上的静态文字 |
 | 🛠️ | 测试本地化软件 | 无需切换系统语言即可验证 UI 翻译 |
