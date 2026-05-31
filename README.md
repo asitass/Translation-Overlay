@@ -19,9 +19,8 @@
   </p>
 </p>
 
-<!-- TODO: Replace with actual demo GIF -->
 <p align="center">
-  <img src="docs/demo/demo.gif" alt="Translation Overlay Demo" width="720">
+  <img src="docs/demo/4.png" alt="Translation Overlay — game dialog translated in real time" width="720">
 </p>
 
 Select any region on your screen. Translation Overlay captures the text with OCR, translates it instantly, and displays the result as a transparent, always-on-top overlay — right where the original text is.
@@ -50,6 +49,13 @@ Select any region on your screen. Translation Overlay captures the text with OCR
 | 📺 | Watching raw anime/dramas | Overlay subtitles directly on the video |
 | 📚 | Reading foreign docs/research | OCR + translate any static text on screen |
 | 🛠️ | Testing localized software | Verify UI translations without switching system language |
+
+<p align="center">
+  <img src="docs/demo/1.png" alt="Original game screen" width="360">
+  <img src="docs/demo/3.png" alt="Translation overlay in action" width="360">
+  <br>
+  <em>Original game dialog (left) → Translation overlay at the bottom (right)</em>
+</p>
 
 ---
 
