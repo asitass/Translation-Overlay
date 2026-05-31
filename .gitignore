@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+node_modules/
+dist/
+release/
+*.db
+*.db-shm
+*.db-wal
+*.log
+venv/
+user-config.yaml
+.env

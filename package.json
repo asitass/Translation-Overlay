@@ -1,0 +1,49 @@
+{
+  "name": "translation-overlay",
+  "version": "1.0.0",
+  "description": "Real-time screen translation overlay",
+  "author": "Translation Overlay Team",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "tsc && tsc -p tsconfig.renderer.json && npm run copy:assets && npm run strip-cjs",
+    "copy:assets": "node scripts/copy-assets.js",
+    "strip-cjs": "node scripts/strip-cjs.js",
+    "dev": "npm run build && npm run rebuild:electron && electron .",
+    "rebuild:electron": "npx electron-rebuild -f -w better-sqlite3,node-screenshots,onnxruntime-node",
+    "rebuild:node": "npm rebuild better-sqlite3 node-screenshots",
+    "start": "electron .",
+    "test": "npm run rebuild:node && vitest run",
+    "test:watch": "npm run rebuild:node && vitest",
+    "pack:win": "npm run build && electron-builder --win",
+    "pack:linux": "npm run build && electron-builder --linux",
+    "pack": "npm run build && electron-builder",
+    "postinstall": "electron-builder install-app-deps && node scripts/patch-bergamot-worker.js"
+  },
+  "dependencies": {
+    "@img/sharp-win32-x64": "^0.34.5",
+    "@mkljczk/bergamot-translator": "^0.4.16",
+    "@napi-rs/canvas-win32-x64-msvc": "^1.0.0",
+    "@vitalets/google-translate-api": "^9.2.0",
+    "better-sqlite3": "^11.7.0",
+    "electron-log": "^5.2.4",
+    "fast-levenshtein": "^3.0.0",
+    "https-proxy-agent": "^9.0.0",
+    "js-yaml": "^4.1.0",
+    "node-screenshots": "^0.2.1",
+    "node-screenshots-win32-x64-msvc": "^0.2.8",
+    "onnxruntime-node": "^1.26.0",
+    "ppu-paddle-ocr": "^5.8.3",
+    "sharp": "^0.34.5",
+    "tesseract.js": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/fast-levenshtein": "^0.0.4",
+    "@types/js-yaml": "^4.0.9",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-rebuild": "^3.2.9",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

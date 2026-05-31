@@ -1,0 +1,59 @@
+appId: com.translation-overlay.app
+productName: Translation Overlay
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - config/**/*
+  - build/icon.png
+  - node_modules/**/*
+  - "!node_modules/**/test/**"
+  - "!node_modules/**/*.md"
+asarUnpack:
+  - "node_modules/better-sqlite3/**/*"
+  - "node_modules/node-screenshots/**/*"
+  - "node_modules/@mkljczk/bergamot-translator/**/*"
+  - "node_modules/tesseract.js/**/*"
+  - "node_modules/tesseract.js-core/**/*"
+  - "node_modules/node-fetch/**/*"
+  - "node_modules/whatwg-url/**/*"
+  - "node_modules/tr46/**/*"
+  - "node_modules/webidl-conversions/**/*"
+  - "node_modules/wasm-feature-detect/**/*"
+  - "node_modules/is-url/**/*"
+  - "node_modules/is-electron/**/*"
+  - "node_modules/bmp-js/**/*"
+  - "node_modules/regenerator-runtime/**/*"
+  - "node_modules/idb-keyval/**/*"
+  - "dist/main/services/tesseract-worker-wrapper.js"
+  - "node_modules/sharp/**/*"
+  - "node_modules/@img/**/*"
+  - "node_modules/onnxruntime-node/**/*"
+  - "node_modules/ppu-paddle-ocr/**/*"
+  - "node_modules/ppu-ocv/**/*"
+  - "node_modules/@napi-rs/canvas/**/*"
+  - "node_modules/@napi-rs/canvas-win32-x64-msvc/**/*"
+  - "node_modules/@napi-rs/canvas-linux-x64-gnu/**/*"
+extraResources:
+  - from: "tessdata"
+    to: "tessdata"
+  - from: "bergamot-models"
+    to: "bergamot-models"
+  - from: "paddle-models"
+    to: "paddle-models"
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+    - target: portable
+      arch: [x64]
+  icon: build/icon.ico
+linux:
+  target: [AppImage]
+  icon: build/icon.png
+  category: Utility
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true

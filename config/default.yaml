@@ -1,0 +1,58 @@
+capture:
+  interval_idle: 3000
+  interval_active: 1500
+  wsl2_mode: false
+
+ocr:
+  engine: auto                # auto | paddle | tesseract（auto = paddle优先，自动降级）
+  languages: ["eng", "chi_sim"]
+  confidence_threshold: 60
+  downscale: 0.65
+  preprocessing:
+    enabled: true
+    upscale: 1.0
+    grayscale: true
+    normalize: true
+  grouping:
+    enabled: true
+    vertical_threshold_ratio: 1.0
+    horizontal_threshold: 50
+    require_overlap: false
+    paragraph_gap_ratio: 2.0
+    detect_columns: true
+
+translation:
+  primary: bergamot
+  fallback: google
+  source_lang: auto
+  target_lang: zh-CN
+  ollama:
+    model: qwen2.5:3b
+    base_url: http://localhost:11434
+  google:
+    api_key: ""
+  deepl:
+    api_key: ""
+  bergamot:
+    model_dir: bergamot-models
+
+overlay:
+  font_size: 14
+  background_color: "rgba(0, 0, 0, 0.75)"
+  text_color: "#FFFFFF"
+  padding: 4
+  display_mode: sideBySide
+
+websocket:
+  host: "127.0.0.1"
+  port: 8765
+
+cache:
+  db_path: "translation_cache.db"
+  max_age_hours: 168
+
+pipeline:
+  lock_mode: document
+  fuzzy_threshold: 0.85
+  document_stability_threshold: 1    # 文档模式稳定帧数（越小越快锁，默认1帧）
+  min_lock_time_ms: 5000             # 最小锁定时间（毫秒），防止快速解锁

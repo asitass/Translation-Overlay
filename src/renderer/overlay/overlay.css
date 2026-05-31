@@ -1,0 +1,111 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%;
+  background: transparent;
+  overflow: hidden;
+  font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+  pointer-events: none;
+}
+#translations {
+  position: relative;
+  width: 100%; height: 100%;
+}
+
+/* ========================================
+   Side-by-side display mode (default)
+   ======================================== */
+.translation-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  contain: layout style paint;
+  /* Semi-transparent background - doesn't fully block original */
+  background: rgba(0, 0, 0, 0.45);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  padding: 2px 5px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: normal;
+  word-break: break-word;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  /* Smooth transitions for position updates */
+  transition: transform 0.15s ease-out;
+}
+
+/* ========================================
+   Hover display mode
+   ======================================== */
+.hover-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  contain: layout style paint;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(100, 150, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.15s ease-out, background 0.2s;
+}
+
+.hover-marker:hover {
+  background: rgba(100, 150, 255, 1);
+  transform: scale(1.3);
+}
+
+.hover-marker .hover-tooltip {
+  display: none;
+  position: absolute;
+  left: 12px;
+  top: -4px;
+  min-width: 120px;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.88);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: normal;
+  word-break: break-word;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 10000;
+}
+
+.hover-marker:hover .hover-tooltip {
+  display: block;
+}
+
+/* Lock indicator */
+.lock-indicator {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  pointer-events: none;
+  z-index: 10001;
+  display: none;
+}
+
+.lock-indicator.visible {
+  display: block;
+}

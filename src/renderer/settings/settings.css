@@ -1,0 +1,41 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: #1e1e1e;
+  color: #cccccc;
+  padding: 20px;
+}
+.container { max-width: 560px; }
+h1 { font-size: 18px; margin-bottom: 16px; color: #ffffff; }
+h2 { font-size: 14px; margin: 12px 0 8px; color: #aaaaaa; }
+section { margin-bottom: 12px; }
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+select, input[type="text"] {
+  background: #2d2d2d;
+  color: #ffffff;
+  border: 1px solid #555555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-left: 8px;
+}
+input[type="range"] {
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.actions { margin-top: 16px; }
+button {
+  background: #0078d4;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+button:hover { background: #106ebe; }
+.status { margin-left: 12px; font-size: 13px; color: #4caf50; }
