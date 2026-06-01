@@ -24,15 +24,15 @@ jobs:
 
 由于 Gitee 附件大小限制（单文件 ≤ 100MB），请使用以下代理方式下载：
 
-**GitHub 代理下载** (ghproxy)
+**GitHub 代理下载**
 `;
             for (const asset of assets) {
-              const url = `https://ghproxy.net/https://github.com/asitass/Translation-Overlay/releases/download/${tag_name}/${encodeURIComponent(asset.name)}`;
+              const url = `https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/download/${tag_name}/${encodeURIComponent(asset.name)}`;
               downloadSection += `- ${asset.name}: ${url}\n`;
             }
             downloadSection += `
-**清华大学镜像站**
-https://mirrors.tuna.tsinghua.edu.cn/github-release/asitass/Translation-Overlay/
+**备用代理**
+https://moeyy.cn/gh-proxy/https://github.com/asitass/Translation-Overlay/releases/tag/${tag_name}
 `;
 
             const fullBody = (body || '') + downloadSection;

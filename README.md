@@ -96,11 +96,11 @@ Or download the pre-built installer from [Releases](https://github.com/asitass/T
 If GitHub Releases is inaccessible or slow, use one of these mirrors:
 
 ```
-# Via ghproxy (recommended)
-https://ghproxy.net/https://github.com/asitass/Translation-Overlay/releases/latest
+# Via gh-proxy (recommended)
+https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/latest
 
-# Via Tsinghua TUNA mirror
-https://mirrors.tuna.tsinghua.edu.cn/github-release/asitass/Translation-Overlay/
+# Via moeyy.cn proxy
+https://moeyy.cn/gh-proxy/https://github.com/asitass/Translation-Overlay/releases/latest
 ```
 
 ---

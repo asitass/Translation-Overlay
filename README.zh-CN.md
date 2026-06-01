@@ -98,11 +98,11 @@ npm run dev
 如果 GitHub Release 下载不稳定或无法访问，可使用以下镜像链接：
 
 ```
-# 通过 ghproxy 代理下载（推荐）
-https://ghproxy.net/https://github.com/asitass/Translation-Overlay/releases/latest
+# 通过 gh-proxy 代理下载（推荐）
+https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/latest
 
-# 通过清华大学 TUNA 镜像站
-https://mirrors.tuna.tsinghua.edu.cn/github-release/asitass/Translation-Overlay/
+# 通过 moeyy.cn 代理下载
+https://moeyy.cn/gh-proxy/https://github.com/asitass/Translation-Overlay/releases/latest
 ```
 
 ---
