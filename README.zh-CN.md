@@ -95,15 +95,15 @@ npm run dev
 
 ## 中国大陆用户 🇨🇳
 
-如果 GitHub Release 下载不稳定或无法访问，可使用以下镜像链接：
+**1. 从 Gitee 下载（推荐 — 国内访问最快）**
+https://gitee.com/zcota/translation-overlay/releases/latest
 
-```
-# 通过 gh-proxy 代理下载（推荐）
-https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/latest
+**2. GitHub 代理下载备用（gh-proxy.com）**
+- [Translation.Overlay.Setup.exe](https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/download/v1.1.0/Translation.Overlay.1.1.0.Setup.exe)
+- [Translation.Overlay.Portable.exe](https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/download/v1.1.0/Translation.Overlay.1.1.0.exe)
+- [Translation.Overlay.AppImage](https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/download/v1.1.0/Translation.Overlay.1.1.0.AppImage)
 
-# 通过 moeyy.cn 代理下载
-https://moeyy.cn/gh-proxy/https://github.com/asitass/Translation-Overlay/releases/latest
-```
+> 以上代理链接固定到 v1.1.0，新版请查看 [Gitee 发行版](https://gitee.com/zcota/translation-overlay/releases)。
 
 ---
 

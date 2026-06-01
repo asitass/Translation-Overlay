@@ -32,7 +32,7 @@ jobs:
             }
             downloadSection += `
 **备用代理**
-https://moeyy.cn/gh-proxy/https://github.com/asitass/Translation-Overlay/releases/tag/${tag_name}
+https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/tag/${tag_name}
 `;
 
             const fullBody = (body || '') + downloadSection;

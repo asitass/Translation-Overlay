@@ -93,15 +93,15 @@ Or download the pre-built installer from [Releases](https://github.com/asitass/T
 
 ## 🇨🇳 Users in China
 
-If GitHub Releases is inaccessible or slow, use one of these mirrors:
+**1. Download from Gitee (recommended — fastest in China)**
+https://gitee.com/zcota/translation-overlay/releases/latest
 
-```
-# Via gh-proxy (recommended)
-https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/latest
+**2. GitHub proxy fallback (via gh-proxy.com)**
+- [Translation.Overlay.Setup.exe](https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/download/v1.1.0/Translation.Overlay.1.1.0.Setup.exe)
+- [Translation.Overlay.Portable.exe](https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/download/v1.1.0/Translation.Overlay.1.1.0.exe)
+- [Translation.Overlay.AppImage](https://gh-proxy.com/https://github.com/asitass/Translation-Overlay/releases/download/v1.1.0/Translation.Overlay.1.1.0.AppImage)
 
-# Via moeyy.cn proxy
-https://moeyy.cn/gh-proxy/https://github.com/asitass/Translation-Overlay/releases/latest
-```
+> Proxy download links above are pinned to v1.1.0 — check [Gitee releases](https://gitee.com/zcota/translation-overlay/releases) for newer versions.
 
 ---
 
