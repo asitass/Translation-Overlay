@@ -22,6 +22,8 @@
   </p>
 </p>
 
+> 📺 **Video tutorials coming soon!** Follow us on [Bilibili](https://space.bilibili.com/3493121134430947) for updates.
+
 <p align="center">
   <img src="docs/demo/4.png" alt="Translation Overlay — game dialog translated in real time" width="720">
 </p>

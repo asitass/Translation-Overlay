@@ -22,6 +22,8 @@
   </p>
 </p>
 
+> 📺 **教程视频即将上线！** 关注 [B站](https://space.bilibili.com/3493121134430947) 获取最新动态。
+
 <p align="center">
   <img src="docs/demo/4.png" alt="Translation Overlay — 游戏对话实时翻译" width="720">
 </p>
