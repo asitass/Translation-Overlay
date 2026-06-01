@@ -1,0 +1,59 @@
+name: Sync Release to Gitee
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  sync-to-gitee:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync release to Gitee
+        uses: actions/github-script@v7
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        with:
+          script: |
+            const { tag_name, name, body, prerelease, assets } = context.payload.release;
+
+            let downloadSection = `
+
+## 📥 下载
+
+> GitHub Release 页面: https://github.com/asitass/Translation-Overlay/releases/tag/${tag_name}
+
+由于 Gitee 附件大小限制（单文件 ≤ 100MB），请使用以下代理方式下载：
+
+**GitHub 代理下载** (ghproxy)
+`;
+            for (const asset of assets) {
+              const url = `https://ghproxy.net/https://github.com/asitass/Translation-Overlay/releases/download/${tag_name}/${encodeURIComponent(asset.name)}`;
+              downloadSection += `- ${asset.name}: ${url}\n`;
+            }
+            downloadSection += `
+**清华大学镜像站**
+https://mirrors.tuna.tsinghua.edu.cn/github-release/asitass/Translation-Overlay/
+`;
+
+            const fullBody = (body || '') + downloadSection;
+
+            const response = await fetch(
+              `https://gitee.com/api/v5/repos/zcota/translation-overlay/releases?access_token=${process.env.GITEE_TOKEN}`,
+              {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  tag_name,
+                  name,
+                  body: fullBody,
+                  prerelease: !!prerelease,
+                }),
+              }
+            );
+
+            const result = await response.json();
+            if (!response.ok) {
+              core.setFailed(`Gitee API error: ${JSON.stringify(result)}`);
+            } else {
+              console.log(`Gitee release created: ${result.html_url}`);
+            }
