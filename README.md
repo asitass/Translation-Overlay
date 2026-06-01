@@ -103,6 +103,78 @@ Pre-built packages are available on the [Releases page](https://github.com/asita
 
 ---
 
+## Usage Guide
+
+### Installation & Launch
+
+**Windows**: Run `Translation Overlay Setup x.x.x.exe` (NSIS installer) and follow the setup wizard, or directly run `Translation Overlay x.x.x.exe` (Portable).
+
+**Linux**: Make the AppImage executable and run:
+
+```bash
+chmod +x Translation\ Overlay-x.x.x-x86_64.AppImage
+./Translation\ Overlay-x.x.x-x86_64.AppImage
+```
+
+On first launch, the app automatically:
+- Creates a full-screen transparent overlay window
+- Opens the Settings window
+- Starts the capture → OCR → translate pipeline
+- Adds a system tray icon
+
+> The first launch may take a few seconds longer due to Bergamot translation model warm-up.
+
+### System Tray
+
+- **Left-click** the tray icon → toggle overlay visibility (show/hide)
+- **Right-click** the tray icon → context menu: Show Overlay, Hide Overlay, Settings, Quit
+
+### Display Modes
+
+Two display modes configurable in the Settings window:
+
+**Side-by-Side** (default): Translations appear as semi-transparent boxes below the original text. Best for reading documents, web pages, and subtitles.
+
+**Hover**: Small blue dot markers appear at translated regions. Hover over a marker to reveal the translation in a tooltip. Keeps the screen clean.
+
+### Lock Mode
+
+The pipeline intelligently locks translations to prevent flickering:
+
+**Document / Web** (recommended for reading): When the screen content stabilizes (no significant changes), the pipeline locks the current translation and pauses processing. A 🔒 indicator appears in the bottom-right corner. The pipeline automatically unlocks when content changes significantly. Ideal for reading articles, documents, and web pages.
+
+<p align="center">
+  <img src="docs/demo/document-mode.png" alt="Lock Mode Demo" width="720">
+</p>
+
+**Video / Game** (recommended for dynamic content): Continuously processes each frame, skipping only duplicate text. No locking — every content change triggers re-translation.
+
+### Settings
+
+| Setting | Options | Default |
+|---------|---------|---------|
+| Primary Engine | Bergamot / Google / Ollama / DeepL | Bergamot |
+| Fallback Engine | Bergamot / Google / Ollama / DeepL / None | Google |
+| Target Language | Chinese / English / Japanese / Korean | Chinese |
+| Display Mode | Side-by-Side / Hover | Side-by-Side |
+| Font Size | 10–24 px | 14 px |
+| Background Opacity | 0–100% | 75% |
+| Lock Mode | Document/Web / Video/Game | Document |
+| Ollama Model | Model name | qwen2.5:3b |
+| Ollama URL | Server address | http://localhost:11434 |
+
+All settings are applied immediately (no restart required).
+
+### Logs
+
+Logs are written to `app.log` in the application's user data directory:
+- Pipeline status (start / stop / lock / unlock)
+- OCR processing time and detected text
+- Translation engine used and results
+- Errors and warnings
+
+---
+
 ## Development Workflow
 
 ### Prerequisites
