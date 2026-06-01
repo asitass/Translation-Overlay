@@ -91,6 +91,20 @@ Or download the pre-built installer from [Releases](https://github.com/asitass/T
 
 ---
 
+## 🇨🇳 Users in China
+
+If GitHub Releases is inaccessible or slow, use one of these mirrors:
+
+```
+# Via ghproxy (recommended)
+https://ghproxy.net/https://github.com/asitass/Translation-Overlay/releases/latest
+
+# Via Tsinghua TUNA mirror
+https://mirrors.tuna.tsinghua.edu.cn/github-release/asitass/Translation-Overlay/
+```
+
+---
+
 ## Download
 
 Pre-built packages are available on the [Releases page](https://github.com/asitass/Translation-Overlay/releases).
