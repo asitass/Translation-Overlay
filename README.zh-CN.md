@@ -3,7 +3,7 @@
   <p align="center">实时翻译屏幕上的任何内容</p>
   <p align="center">
     <a href="https://github.com/asitass/Translation-Overlay/releases"><img src="https://img.shields.io/github/v/release/asitass/Translation-Overlay?style=flat-square" alt="Release"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/asitass/Translation-Overlay?style=flat-square" alt="MIT License"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/asitass/Translation-Overlay?style=flat-square" alt="AGPL-3.0 License"></a>
     <a href="https://github.com/asitass/Translation-Overlay/actions"><img src="https://img.shields.io/github/actions/workflow/status/asitass/Translation-Overlay/build.yml?style=flat-square" alt="Build Status"></a>
   </p>
   <p align="center">
@@ -70,7 +70,7 @@
 | 跨平台 | ✅ Win + Linux | ❌ 仅 Windows | ❌ 仅 Windows | ❌ 仅 Windows |
 | 技术栈 | Electron + TypeScript | C# .NET | C++ Qt | Python PySide6 |
 | 锁定模式 | ✅ 智能稳定锁定 | ❌ | ❌ | 部分支持 |
-| 许可证 | MIT | Apache 2.0 | MIT | MIT |
+| 许可证 | AGPL-3.0 | Apache 2.0 | MIT | MIT |
 | 维护状态 | 活跃 | 活跃 | 已停更 | 活跃 |
 
 ---
@@ -417,7 +417,7 @@ paddle-models/
 
 ## 许可证
 
-[MIT](LICENSE)
+[AGPL-3.0](LICENSE)
 
 ---
 

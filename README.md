@@ -3,7 +3,7 @@
   <p align="center">Translate anything on your screen — in real time</p>
   <p align="center">
     <a href="https://github.com/asitass/Translation-Overlay/releases"><img src="https://img.shields.io/github/v/release/asitass/Translation-Overlay?style=flat-square" alt="Release"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/github/license/asitass/Translation-Overlay?style=flat-square" alt="MIT License"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/asitass/Translation-Overlay?style=flat-square" alt="AGPL-3.0 License"></a>
     <a href="https://github.com/asitass/Translation-Overlay/actions"><img src="https://img.shields.io/github/actions/workflow/status/asitass/Translation-Overlay/build.yml?style=flat-square" alt="Build Status"></a>
   </p>
   <p align="center">
@@ -70,7 +70,7 @@ Select any region on your screen. Translation Overlay captures the text with OCR
 | Cross-Platform | ✅ Win + Linux | ❌ Windows only | ❌ Windows only | ❌ Windows only |
 | Tech Stack | Electron + TypeScript | C# .NET | C++ Qt | Python PySide6 |
 | Lock Mode | ✅ Smart stability lock | ❌ | ❌ | Partial |
-| License | MIT | Apache 2.0 | MIT | MIT |
+| License | AGPL-3.0 | Apache 2.0 | MIT | MIT |
 | Status | Active | Active | Abandoned | Active |
 
 ---
@@ -415,7 +415,7 @@ PRs welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-[MIT](LICENSE)
+[AGPL-3.0](LICENSE)
 
 ---
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Real-time screen translation overlay",
   "author": "Translation Overlay Team",
+  "license": "AGPL-3.0-or-later",
   "main": "dist/main/index.js",
   "scripts": {
     "build": "tsc && tsc -p tsconfig.renderer.json && npm run copy:assets && npm run strip-cjs",
