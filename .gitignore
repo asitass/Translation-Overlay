@@ -20,3 +20,6 @@ tessdata/
 chi_sim.traineddata
 eng.traineddata
 pipeline.js
+
+# Design docs (local only, not pushed)
+docs/superpowers/
